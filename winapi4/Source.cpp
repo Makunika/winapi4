@@ -77,8 +77,10 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	wc.style = CS_HREDRAW | CS_VREDRAW;	// Стиль класса 
 	wc.hInstance = hInstance;		// Экземпляр приложения
 	wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	//wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDC_POINTER));
 	// Пиктограмма для окон
-	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+	//wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+	wc.hCursor = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_POINTER));
 	// Курсор мыши для окон
 	wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
 	// Кисть для окон
